@@ -8,6 +8,6 @@ class AppRoutes {
   static Map<String, WidgetBuilder> routes = <String, WidgetBuilder>{
     home: (BuildContext context) {
       return const Home();
-    }
+    },
   };
 }
