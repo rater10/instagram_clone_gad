@@ -13,14 +13,12 @@ class AuthEpics {
   final AuthApi _api;
 
   Epic<AppState> get epics {
-    return combineEpics<AppState>(
-        <Epic<AppState>>[TypedEpic<AppState, Login$>(_login)]);
+    return combineEpics<AppState>(<Epic<AppState>>[TypedEpic<AppState, Login$>(_login)]);
   }
 
   Stream<AppAction> _login(Stream<Login$> actions, EpicStore<AppState> store) {
     return actions
-        .asyncMap((Login$ action) =>
-            _api.login(email: action.email, password: action.password))
+        .asyncMap((Login$ action) => _api.login(email: action.email, password: action.password))
         .map((AppUser user) => Login.successful(user))
         .onErrorReturnWith((dynamic error) => Login.error(error));
   }

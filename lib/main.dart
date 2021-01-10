@@ -1,13 +1,9 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:instagram_clone_gad/src/init/init.dart';
 import 'package:instagram_clone_gad/src/models/index.dart';
 import 'package:instagram_clone_gad/src/presentation/mixin/init_mixin.dart';
 import 'package:instagram_clone_gad/src/presentation/routes.dart';
 import 'package:redux/redux.dart';
-import 'package:rxdart/rxdart.dart';
 
 void main() {
   runApp(const InstagramClone());
@@ -21,7 +17,6 @@ class InstagramClone extends StatefulWidget {
 }
 
 class _InstagramCloneState extends State<InstagramClone> with InitMixin<InstagramClone> {
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<Store<AppState>>(
