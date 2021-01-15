@@ -1,4 +1,4 @@
-part of auth_containers;
+part of auth_conatiners;
 
 class UserContainer extends StatelessWidget {
   const UserContainer({Key key, @required this.builder}) : super(key: key);

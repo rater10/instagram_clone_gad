@@ -1,4 +1,4 @@
-import 'package:instagram_clone_gad/src/data/auth_api/auth_api.dart';
+import 'package:instagram_clone_gad/src/data/auth_api.dart';
 import 'package:instagram_clone_gad/src/epics/auth_epics.dart';
 import 'package:instagram_clone_gad/src/models/index.dart';
 import 'package:redux_epics/redux_epics.dart';
